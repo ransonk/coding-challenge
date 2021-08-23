@@ -3,7 +3,7 @@ const should = chai.should();
 const mochaAsync = require('./mochaAsync');
 
 describe('moviesDetails.js', () => {
-	it('should return all the movie details', mochaAsync(async () =>{
+	it('should return all the movie details', mochaAsync(async () => {
 		const moviesDetails = require('../exercises/moviesDetails');
 
 		try {
@@ -18,7 +18,7 @@ describe('moviesDetails.js', () => {
 			result[0].should.have.property('Year');
 			result[0].Year.should.equal('2009');
 			result[0].should.have.property('Genre');
-			result[0].Genre.should.equal('Drama, Fantasy, Romance, Sci-Fi');
+			result[0].Genre.should.equal('Drama, Fantasy, Romance');
 
 			result[1].should.be.a('object');
 			result[1].should.have.property('Title');
@@ -36,7 +36,7 @@ describe('moviesDetails.js', () => {
 			result[2].should.have.property('Genre');
 			result[2].Genre.should.equal('Crime, Drama');
 		}
-		catch(err){
+		catch (err) {
 			throw err
 		}
 	}));
